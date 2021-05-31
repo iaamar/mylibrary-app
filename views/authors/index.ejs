@@ -8,5 +8,7 @@
   <div>
     <%= author.name %>
   </div>
-
-  <% }) %>
+  <a href="/authors/<%= author.id %>">view</a>
+  <a href="/authors/<%= author.id %>/edit">edit</a>
+  <%- include('../partials/delete_form.ejs', { url:`/authors/${author.id}` }) %>
+    <% }) %>
