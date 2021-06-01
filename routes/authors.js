@@ -48,7 +48,6 @@ router.get('/:id', async (req, res) => {
       booksByAuthor: books,
     })
   } catch (error) {
-    console.log(error)
     res.redirect('/')
   }
 })

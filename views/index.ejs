@@ -1,9 +1,18 @@
-<h2>
-    Recently Added
-</h2>
-
 <div>
-    <% books.forEach(book=>{ %>
-        <img src="<%= book.coverImagePath %>" height='150' width='100'>
-        <% }) %>
+    <% if(books.length>0){ %>
+        <h2>
+            Recently Added
+        </h2>
+        <% books.forEach(book=>{ %>
+
+            <a href="/books/<%= book.id %>">
+                <img src="<%= book.coverImagePath %>" height='150' width='100'>
+            </a>
+            <% }) %>
+                <% } else { %>
+                    <h2>No Book in inventory</h2>
+                    <% } %>
+
+
+
 </div>
