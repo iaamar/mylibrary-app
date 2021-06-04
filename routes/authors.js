@@ -2,6 +2,7 @@ const express = require("express");
 const Author = require("../models/author");
 const router = express.Router();
 const Book = require('../models/book')
+~
 //All Authors Router
 router.get("/", async (req, res) => {
   let serachQuery = {};
@@ -18,10 +19,12 @@ router.get("/", async (req, res) => {
     res.redirect("/");
   }
 });
+
 //New Author Route
 router.get("/new", (req, res) => {
   res.render("authors/new", { author: new Author() })
 });
+
 //Create Author Router
 router.post("/", async (req, res) => {
   const author = new Author({
@@ -51,6 +54,7 @@ router.get('/:id', async (req, res) => {
     res.redirect('/')
   }
 })
+
 router.get('/:id/edit', async (req, res) => {
   try {
     const author = await Author.findById(req.params.id)
@@ -60,6 +64,7 @@ router.get('/:id/edit', async (req, res) => {
   }
 
 })
+
 router.put('/:id', async (req, res) => {
   let author
   try {
@@ -78,6 +83,7 @@ router.put('/:id', async (req, res) => {
     }
   }
 })
+
 router.delete('/:id', async (req, res) => {
   let author
   try {
