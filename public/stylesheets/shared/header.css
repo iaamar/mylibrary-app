@@ -5,7 +5,7 @@
 }
 
 .header-title{
-    color: var(--color-text-light);
+    color: white;
     text-decoration: none;
     font-size: var(--nav-title-font-size);
     font-weight: var(--nav-title-font-weight);
@@ -16,7 +16,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 5rem;
+    margin-bottom: 3.3rem;
 }
 
 .header-nav ul{

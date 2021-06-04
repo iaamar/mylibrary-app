@@ -3,6 +3,8 @@
 @import 'shared/header.css';
 @import 'shared/buttons.css';
 @import 'shared/form.css';
+@import 'shared/authors.css';
+@import 'shared/books.css';
 html{
     height: 100%;
   }
@@ -35,3 +37,7 @@ html{
     font-size: 2rem;
     font-weight: 500;
   } 
+
+  .error{
+    color: hsl(var(--color-danger-hue),100%,50%);
+  }
